@@ -331,8 +331,8 @@
 				],
 				"type": "BlobEventsTrigger",
 				"typeProperties": {
-					"blobPathBeginsWith": "/wwi-02/blobs/ sale-poc/Sample-Spreadsheet-10-rows.csv",
-					"blobPathEndsWith": ".csv",
+					"blobPathBeginsWith": "/wwi-02/blobs/",
+					"blobPathEndsWith": "Sample-Spreadsheet-10-rows.csv",
 					"ignoreEmptyBlobs": true,
 					"scope": "[parameters('trigger_Event_properties_typeProperties_scope')]",
 					"events": [
