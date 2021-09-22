@@ -11,9 +11,25 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
 		},
+		"AzureBlobStorageTarget_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorageTarget'"
+		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://asadatalaken4wsfr0.dfs.core.windows.net"
+		},
+		"trigger_Event_properties_pipeline_copy_Experiment_parameters_FolderName": {
+			"type": "string",
+			"defaultValue": "sale-poc"
+		},
+		"trigger_Event_properties_pipeline_copy_Experiment_parameters_FileName": {
+			"type": "string",
+			"defaultValue": ".csv"
+		},
+		"trigger_Event_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/8528e809-59d8-4e48-a889-56dcf6fd4be0/resourceGroups/data-engineering-synapse-n4wsfr0/providers/Microsoft.Storage/storageAccounts/asadatalaken4wsfr0"
 		},
 		"containerUri": {
 			"type": "string",
@@ -45,8 +61,20 @@
 					"AzureDataLakeStorage1_accountKey": {
 						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
 					},
+					"AzureBlobStorageTarget_connectionString": {
+						"value": "[parameters('AzureBlobStorageTarget_connectionString')]"
+					},
 					"AzureDataLakeStorage1_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"trigger_Event_properties_pipeline_copy_Experiment_parameters_FolderName": {
+						"value": "[parameters('trigger_Event_properties_pipeline_copy_Experiment_parameters_FolderName')]"
+					},
+					"trigger_Event_properties_pipeline_copy_Experiment_parameters_FileName": {
+						"value": "[parameters('trigger_Event_properties_pipeline_copy_Experiment_parameters_FileName')]"
+					},
+					"trigger_Event_properties_typeProperties_scope": {
+						"value": "[parameters('trigger_Event_properties_typeProperties_scope')]"
 					}
 				}
 			},
