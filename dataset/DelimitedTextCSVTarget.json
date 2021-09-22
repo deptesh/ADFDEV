@@ -1,0 +1,22 @@
+{
+	"name": "DelimitedTextCSVTarget",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorageTarget",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "DataOutput",
+				"container": "wwi-02"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
